@@ -1,0 +1,71 @@
+cabal-version:       2.2
+
+name:                decoder-transformer
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/torch-tutorial#readme
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2025 Author name here
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+                     CHANGELOG.md
+executable decoder-transformer
+  main-is:             Main.hs
+  hs-source-dirs:      app
+  build-depends:       base
+                     , decoder-transformer
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     DecoderTransformer
+  other-modules:
+  build-depends:       base >= 4.7 && < 5
+                     , hasktorch
+                     , libtorch-ffi
+                     , mtl
+                     , async
+                     , constraints
+                     , containers
+                     , foldl
+                     , lens-family-core
+                     , ordered-containers
+                     , pipes
+                     , pipes-group
+                     , pipes-random
+                     , pipes-safe
+                     , pipes-text
+                     , safe-exceptions
+                     , text
+                     , monad-control
+                     , transformers-base >= 0.4
+                     , ghc-typelits-natnormalise
+                     , ghc-typelits-knownnat
+                     , ghc-typelits-extra
+                     , transformers
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+                       -Wcompat
+                       -Widentities
+                       -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns
+                       -Wmissing-export-lists
+                       -Wmissing-home-modules
+                       -Wpartial-fields
+                       -Wredundant-constraints
+                       -fno-warn-partial-type-signatures
+                       -fplugin GHC.TypeLits.Normalise
+                       -fplugin GHC.TypeLits.KnownNat.Solver
+                       -fplugin GHC.TypeLits.Extra.Solver
+                       -fconstraint-solver-iterations=0
+                       -rtsopts
+
+source-repository head
+  type:     git
+  location: https://github.com/githubuser/torch-tutorial
