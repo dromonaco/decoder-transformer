@@ -49,6 +49,7 @@ library
                      , ghc-typelits-knownnat
                      , ghc-typelits-extra
                      , transformers
+                     , unix
   default-language:    Haskell2010
   ghc-options:         -Wall
                        -Wcompat

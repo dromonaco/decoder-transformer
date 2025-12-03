@@ -3,7 +3,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards #-}
 
-module DecoderTransformer (program) where
+-- module DecoderTransformer (program) where
+module DecoderTransformer where
 
 import qualified Control.Foldl as L
 import Control.Monad (forever, replicateM, when)
