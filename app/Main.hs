@@ -12,8 +12,8 @@ main = do
   let evalTokens = 192 * tokensPerBatch
 
 -- --- SCENARIO 1: Train Fresh (Overwrite old model) ---
-  -- putStrLn "--- Starting Fresh Training ---"
-  -- program epochs trainFile trainTokens evalFile evalTokens Nothing (Just "haskell_model.pt")
+  putStrLn "--- Starting Fresh Training ---"
+  program epochs trainFile trainTokens evalFile evalTokens Nothing (Just "rpg_model.pt")
 
 -- --- SCENARIO 2: Resume Training (Load existing, train more, save back) ---
 -- putStrLn "--- Resuming Training ---"
@@ -25,5 +25,5 @@ main = do
   -- program 0 trainFile trainTokens evalFile evalTokens (Just "tiny_shakespeare_untyped_model.pt") Nothing
 
   -- --- SCENARIO 4: Train Fresh (No save, no read) ---
-  putStrLn "--- Starting Fresh Training ---"
-  program epochs trainFile trainTokens evalFile evalTokens Nothing Nothing
+  -- putStrLn "--- Starting Fresh Training ---"
+  -- program epochs trainFile trainTokens evalFile evalTokens Nothing Nothing
